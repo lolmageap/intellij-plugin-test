@@ -27,4 +27,11 @@
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
+    <!--command + N-->
+    <actions>
+        <action id="Custom.Menu" class="com.example.test.Menu" text="메뉴 입력하기">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+    </actions>
+
 </idea-plugin>
