@@ -1,7 +1,7 @@
-package com.example.test.note.action
+package com.cherhy.plugin.note.action
 
-import com.example.test.note.constant.NoteConstant.IDEA
-import com.example.test.note.constant.NoteConstant.NOTEPAD_PACKAGE
+import com.cherhy.plugin.note.constant.NoteConstant.IDEA
+import com.cherhy.plugin.note.constant.NoteConstant.NOTEPAD_PACKAGE
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
 import java.nio.file.Paths

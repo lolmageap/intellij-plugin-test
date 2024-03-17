@@ -1,4 +1,4 @@
-package com.example.test.note.constant
+package com.cherhy.plugin.note.constant
 
 object NoteConstant {
     const val IDEA = ".idea"

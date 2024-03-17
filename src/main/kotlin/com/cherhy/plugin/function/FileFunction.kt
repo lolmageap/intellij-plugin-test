@@ -1,7 +1,7 @@
-package com.example.test.function
+package com.cherhy.plugin.function
 
-import com.example.test.note.constant.NoteConstant.IDEA
-import com.example.test.note.constant.NoteConstant.NOTEPAD_PACKAGE
+import com.cherhy.plugin.note.constant.NoteConstant.IDEA
+import com.cherhy.plugin.note.constant.NoteConstant.NOTEPAD_PACKAGE
 import com.intellij.openapi.project.Project
 import java.io.File
 import java.nio.file.Paths

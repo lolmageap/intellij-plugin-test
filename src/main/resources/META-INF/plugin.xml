@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.example.test</id>
+    <id>com.cherhy.plugin</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
@@ -28,18 +28,18 @@
 
     </extensions>
     <actions>
-        <action id="Custom.Menu" class="com.example.test.Menu" text="메뉴 입력하기">
+        <action id="Custom.Menu" class="com.cherhy.plugin.Menu" text="메뉴 입력하기">
             <!--command + N-->
             <add-to-group group-id="GenerateGroup" anchor="last"/>
         </action>
 
-        <action id="Custom.ByteCode" class="com.example.test.bytecode.ByteCode" text="ByteCode 보기">
+        <action id="Custom.ByteCode" class="com.cherhy.plugin.bytecode.ByteCode" text="ByteCode 보기">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt I"/>
             <keyboard-shortcut keymap="Mac OS X" first-keystroke="meta alt I"/>
             <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="meta alt I"/>
         </action>
 
-        <action id="Custom.OpenNotepadAction" class="com.example.test.note.action.OpenNotepadAction" text="Notepad">
+        <action id="Custom.OpenNotepadAction" class="com.cherhy.plugin.note.action.OpenNotepadAction" text="Notepad">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt M"/>
             <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl alt M" />
             <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl alt M" />
@@ -47,6 +47,6 @@
     </actions>
 
     <applicationListeners>
-        <listener class="com.example.test.note.action.NotepadInitializer" topic="com.intellij.openapi.project.ProjectManagerListener"/>
+        <listener class="com.cherhy.plugin.note.action.NotepadInitializer" topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>

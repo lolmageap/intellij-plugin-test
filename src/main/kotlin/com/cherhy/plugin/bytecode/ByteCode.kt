@@ -1,4 +1,4 @@
-package com.example.test.bytecode
+package com.cherhy.plugin.bytecode
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent

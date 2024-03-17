@@ -1,7 +1,7 @@
-package com.example.test.note.define
+package com.cherhy.plugin.note.define
 
-import com.example.test.function.rootPackage
-import com.example.test.note.ui.Notepad
+import com.cherhy.plugin.function.rootPackage
+import com.cherhy.plugin.note.ui.Notepad
 import javax.swing.JFileChooser
 
 fun Notepad.open() {

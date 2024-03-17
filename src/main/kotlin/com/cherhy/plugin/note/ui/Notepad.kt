@@ -1,10 +1,10 @@
-package com.example.test.note.ui
+package com.cherhy.plugin.note.ui
 
-import com.example.test.note.constant.NoteConstant.CLOSE
+import com.cherhy.plugin.note.constant.NoteConstant.CLOSE
 import com.intellij.openapi.project.Project
 import java.awt.BorderLayout.*
 import javax.swing.*
-import com.example.test.note.define.saveTextToFile
+import com.cherhy.plugin.note.define.saveTextToFile
 import java.awt.Dimension
 import java.awt.event.ActionEvent
 import java.awt.event.KeyEvent
