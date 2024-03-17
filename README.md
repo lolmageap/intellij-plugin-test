@@ -5,3 +5,13 @@
 2. 그러면 resources/META-INF 경로에 plugin.xml 파일에 action 을 등록 시켜 줍니다.
 3. 그리고 main 경로에 class file 또한 생성이 됩니다.
 4. class file 을 작성 후 gradle build 를 실행 시켜 줍니다.
+
+## TODO
+- [ ] Notepad Plugin 개발
+- [ ] 날짜별 Compile error history 개발
+
+## Spec
+- [ ] Kotlin
+- [ ] Gradle
+- [ ] Java Swing
+- [ ] JDK 17
