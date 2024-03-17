@@ -42,4 +42,7 @@ class Notepad(
         rootPane.inputMap.put(escKeyStroke, CLOSE)
         rootPane.actionMap.put(CLOSE, escAction)
     }
+
+    // TODO: ctrl + s to save
+    // TODO: 다른 화면을 누르면 닫히는 현상 수정
 }
