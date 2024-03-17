@@ -8,6 +8,7 @@
 
 ## TODO
 - [ ] Notepad Plugin 개발
+- [ ] Kotlin, Java Class file 에서 Bytecode 파일로 추출
 - [ ] 날짜별 Compile error history 개발
 
 ## Spec
