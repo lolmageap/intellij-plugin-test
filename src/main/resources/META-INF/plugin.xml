@@ -33,6 +33,20 @@
             <add-to-group group-id="GenerateGroup" anchor="last"/>
         </action>
 
+        <action id="Custom.ByteCode" class="com.example.test.bytecode.ByteCode" text="ByteCode 보기">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt I"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="meta alt I"/>
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="meta alt I"/>
+        </action>
+
+        <action id="Custom.OpenNotepadAction" class="com.example.test.note.action.OpenNotepadAction" text="Notepad">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt M"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl alt M" />
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl alt M" />
+        </action>
     </actions>
 
+    <applicationListeners>
+        <listener class="com.example.test.note.action.NotepadInitializer" topic="com.intellij.openapi.project.ProjectManagerListener"/>
+    </applicationListeners>
 </idea-plugin>
