@@ -1,11 +1,13 @@
 package com.cherhy.plugin.note.ui
 
 import com.cherhy.plugin.note.constant.NoteConstant.CLOSE
+import com.cherhy.plugin.note.constant.NoteConstant.SAVE
 import com.intellij.openapi.project.Project
 import java.awt.BorderLayout.*
 import javax.swing.*
 import com.cherhy.plugin.note.define.saveTextToFile
 import java.awt.Dimension
+import java.awt.Toolkit
 import java.awt.event.ActionEvent
 import java.awt.event.KeyEvent
 
@@ -19,16 +21,29 @@ class Notepad(
         size = Dimension(800, 600)
         setLocationRelativeTo(null)
 
+        isVisible = false
+
         val scrollPane = JScrollPane(textArea)
         add(scrollPane, CENTER)
 
-        val saveButton = JButton("Save")
+        val saveButton = JButton(SAVE)
         add(saveButton, SOUTH)
-
         saveButton.addActionListener { saveTextToFile() }
-        isVisible = false
 
+        saveEvent()
         closeEvent()
+    }
+
+    private fun saveEvent() {
+        val saveKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_S, Toolkit.getDefaultToolkit().menuShortcutKeyMask, false)
+        val saveAction = object : AbstractAction() {
+            override fun actionPerformed(e: ActionEvent?) {
+                saveTextToFile()
+            }
+        }
+
+        rootPane.inputMap.put(saveKeyStroke, SAVE)
+        rootPane.actionMap.put(SAVE, saveAction)
     }
 
     private fun closeEvent() {
