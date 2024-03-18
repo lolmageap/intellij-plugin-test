@@ -4,6 +4,10 @@ import com.cherhy.plugin.function.rootPackage
 import com.cherhy.plugin.note.ui.Notepad
 import javax.swing.JFileChooser
 
+fun Notepad.new() {
+    textArea.isVisible = true
+}
+
 fun Notepad.open() {
     val defaultDirectory = rootPackage(project)
 
@@ -12,11 +16,10 @@ fun Notepad.open() {
 
         val dialog = showOpenDialog(contentPane)
         if (dialog == JFileChooser.APPROVE_OPTION) {
+            textArea.isVisible = true
             textArea.text = selectedFile.readText()
         }
     }
-
-    isVisible = true
 }
 
 fun Notepad.saveTextToFile() {
@@ -24,8 +27,11 @@ fun Notepad.saveTextToFile() {
 
     JFileChooser().apply {
         currentDirectory = defaultDirectory
-        isVisible = true
-        selectedFile.writeText(textArea.text)
+
+        val dialog = showOpenDialog(contentPane)
+        if (dialog == JFileChooser.APPROVE_OPTION) {
+            selectedFile.writeText(textArea.text)
+        }
     }
 
     dispose()
