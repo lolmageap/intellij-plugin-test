@@ -4,4 +4,5 @@ object NoteConstant {
     const val IDEA = ".idea"
     const val NOTEPAD_PACKAGE = "notepad"
     const val CLOSE = "CLOSE"
+    const val SAVE = "SAVE"
 }
