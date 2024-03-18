@@ -39,10 +39,16 @@
             <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="meta alt I"/>
         </action>
 
-        <action id="Custom.OpenNotepadAction" class="com.cherhy.plugin.note.action.OpenNotepadAction" text="Notepad">
+        <action id="Custom.OpenNotepadAction" class="com.cherhy.plugin.note.action.OpenNotepadAction" text="NotepadOpen">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt M"/>
             <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl alt M" />
             <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl alt M" />
+        </action>
+
+        <action id="Custom.NewNotepadAction" class="com.cherhy.plugin.note.action.NewNotepadAction" text="NotepadNew">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt N"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl alt N" />
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl alt N" />
         </action>
     </actions>
 
