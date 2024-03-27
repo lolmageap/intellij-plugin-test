@@ -20,6 +20,7 @@ class Notepad(
 ): JFrame() {
 
     val currentFileName = UUID.randomUUID().toString() + ".txt"
+    var currentFile: File? = null
 
     init {
         title = "Notepad"
