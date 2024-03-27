@@ -19,8 +19,10 @@ fun Notepad.open() {
 
         val dialog = showOpenDialog(contentPane)
         if (dialog == JFileChooser.APPROVE_OPTION) {
+            currentFile = selectedFile
             textArea.isVisible = true
-            textArea.text = selectedFile.readText()
+            this.isVisible = true
+            textArea.text = currentFile?.readText()
         }
     }
 }
@@ -31,11 +33,8 @@ fun Notepad.createDefaultFile() {
     fileToSave.writeText(textArea.text)
 }
 
-// TODO : 중복 제거 하기
 fun Notepad.saveTextToFile() {
-    val defaultDirectory = rootPackage(project)
-    val fileToSave = File(defaultDirectory, currentFileName)
-    fileToSave.writeText(textArea.text)
+    currentFile?.writeText(textArea.text)
 }
 
 fun Notepad.saveAndClose() {
